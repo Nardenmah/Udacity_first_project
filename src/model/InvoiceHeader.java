@@ -12,6 +12,7 @@ public class InvoiceHeader {
     private ArrayList<InvoiceLine> lines;
 
     public InvoiceHeader() {
+
     }
 
     public InvoiceHeader(String name, Date date, int invoiceNumber) {
@@ -70,13 +71,16 @@ public class InvoiceHeader {
         return total;
     }
 
-    public void addInvoiceLine(InvoiceLine line) {
+    public void addInvoiceLine(InvoiceLine line)
+    {
         getLines().add(line);
     }
 
-    public String getDataCustomer() {
+    public String getDataCustomer()
+    {
         DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
         return "" + getInvoiceNumber() + "," + df.format(getDate()) + "," + getName();
     }
+
 
 }

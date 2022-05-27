@@ -1,10 +1,10 @@
 package model;
 
 public class InvoiceLine {
-private String name;
-private double price ;
-private int count;
-private InvoiceHeader header;
+    private String name;
+    private double price ;
+    private int count;
+    private InvoiceHeader header;
 
     public InvoiceLine(String name, double price, int count, InvoiceHeader header) {
         this.name = name;
@@ -63,4 +63,5 @@ private InvoiceHeader header;
         return "" + getHeader().getInvoiceNumber() + "," + getName() + "," + getPrice() + "," + getCount();
     }
 }
+
 
